@@ -1,0 +1,24 @@
+构造函数写法:
+/*1*/
+box(float len,float wid,float height){
+  this->len=len;
+  this->wid=wid;
+  this->height=height;
+}
+/*2*/
+box(float len,float wid,float height):len(len),wid(wid),height(height){};
+
+
+类内函数可以先声明再定义:
+class account{
+  public:
+    account(string ID,double BALANCE);
+    string get_id();
+    double get_balance();
+  private:
+    string id;
+    double balance;
+};
+string account::get_id(){return id;}
+double account::get_balance(){return balance;}
+account::account(string ID,double BALANCE){id=ID;balance=BALANCE;}
